@@ -1,18 +1,14 @@
-// Triangle function
-
-
-function triangle(side1, side2, side3){
-  //it does not equal a triangle
-    if(side1 + side2 <= side3){
-      return true;
-  //it has two equal sides
-} else if((side1 === side2) && (side2 !== side3)){
-      return true;
-  //it has not equal sides
-} else if((side1 !== side2) && (side2 !== side3)){
-      return true;
-  //it has all equal sides
-} else if((side1 === side2) && (side2 === side3)){
-    return true;
+// so beautiful!
+function triangle(sideA, sideB, sideC){
+  if(sideA <= (sideB + sideC) && sideB <= (sideC + sideA) && sideC <= (sideA + sideB)){
+    if(sideA === sideB && sideB === sideC){
+      return "equalateral";
+    } else if (sideA === sideB || sideA === sideC || sideC === sideB){
+      return "isosceles";
+    } else {
+      return "scalene"
+    }
+  } else {
+    return "These sides do not a triangle make";
   }
 }
